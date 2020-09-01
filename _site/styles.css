@@ -1,0 +1,152 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica", "Arial", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 150%;
+}
+
+a, a:visited {
+  color: #112378;
+}
+a:hover, a:active {
+  color: #0033FF;
+}
+a:focus {
+  outline: 3px solid #17C37B;
+  outline-offset: 3px;
+}
+
+label {
+  padding: 0 0.5rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+input {
+  margin-bottom: 2rem;
+  padding: 0.5rem;
+  display: block;
+  width: 100%;
+  font-size: inherit;
+  border: 1px solid #bbb;
+  border-radius: 0.25rem;
+}
+input:hover, input:active {
+  border-color: #112378;
+}
+input:focus {
+  outline: 3px solid #17C37B;
+  outline-offset: 3px;
+}
+
+.screen-reader-only {
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.button {
+  padding: 0.5rem 1rem;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: #112378;
+  color: #FFD007;
+  border: 0;
+  cursor: pointer;
+  font-size: 100%;
+  text-transform: uppercase;
+  letter-spacing: 0.0625rem;
+}
+.button:hover, .button:active {
+  background-color: #0033FF;
+  color: #fff;
+}
+.button:focus {
+  outline: 3px solid #17C37B;
+  outline-offset: 3px;
+}
+
+.button--scrim {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 98;
+  background-color: rgba(55, 71, 79, 0.75);
+  transition: opacity 0.15s;
+}
+.button--scrim:hover, .button--scrim:active {
+  background-color: rgba(55, 71, 79, 0.75);
+}
+.button--scrim.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.button--close {
+  padding: 0;
+  background-color: transparent;
+  color: #112378;
+}
+.button--close:hover, .button--close:active {
+  background-color: transparent;
+  color: #0033FF;
+}
+.button--close svg {
+  fill: currentColor;
+}
+
+.modal {
+  padding: 0;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+  left: 1rem;
+  z-index: 99;
+  border: 0;
+  border-radius: 0.25rem;
+  box-shadow: 0 0.25rem 1rem -0.5rem #000;
+  transition: opacity 0.15s, transform 0.15s;
+}
+.modal:not([open]) {
+  visibility: hidden;
+  display: flex;
+  opacity: 0;
+  transform: scale(0.5);
+}
+
+.modal__header {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #bbb;
+}
+
+.modal__title {
+  margin: 0;
+}
+.modal__title:focus {
+  outline: 3px solid #17C37B;
+  outline-offset: 3px;
+}
+
+.modal__content {
+  padding: 1rem;
+  max-height: 100%;
+  overflow-y: auto;
+}

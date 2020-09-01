@@ -1,0 +1,44 @@
+---
+title: Modal Windows for Everyone
+description: Demo site for accessible modal dialogs
+layout: page
+permalink: /
+---
+<button id="button-open" class="button button--open" aria-controls="modal">
+  Open Modal
+</button>
+
+<button id="button-scrim" class="button button--scrim is-hidden" aria-hidden="true" tabindex="-1">
+</button>
+
+<dialog id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true" inert>
+  <header class="modal__header">
+    <h2 id="modal-title" class="modal__title" tabindex="0">Add New User</h2>
+    <button id="button-close" class="button button--close modal__close">
+      <span class="screen-reader-only">Close New User Modal</span>
+      <svg role="presentation" aria-hidden="true" focusable="false" version="1.1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 512 512">
+        <path d="M480 390.368l-134.496-134.368 134.496-134.368-89.632-89.632-134.368 134.432-134.432-134.432-89.568 89.632 134.368 134.368-134.368 134.368 89.568 89.632 134.432-134.432 134.368 134.432z"></path>
+      </svg>
+    </button>
+  </header>
+  <div class="modal__content">
+    <form action="#">
+      <label for="name">Name</label>
+      <input type="text" id="name" />
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" />
+
+      <label for="phone">Phone Number</label>
+      <input type="text" id="phone" />
+
+      <label for="state">State of Residence</label>
+      <input type="text" id="state" />
+
+      <label for="date">Date of Birth</label>
+      <input type="date" id="date" />
+
+      <button class="button" type="submit">Submit</button>
+    </form>
+  </div>
+</dialog>

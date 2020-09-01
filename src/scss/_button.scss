@@ -1,0 +1,60 @@
+.button {
+  padding: 0.5rem 1rem;
+  appearance: none;
+  background-color: $color-blue;
+  color: $color-yellow;
+  border: 0;
+  cursor: pointer;
+  font-size: 100%;
+  text-transform: uppercase;
+  letter-spacing: .0625rem;
+
+  &:hover,
+  &:active {
+    background-color: $color-bright;
+    color: #fff;
+  }
+
+  &:focus {
+    outline: 3px solid $color-green;
+    outline-offset: 3px;
+  }
+}
+
+.button--scrim {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 98;
+  background-color: rgba(55, 71, 79, .75);
+  transition: opacity .15s;
+
+  &:hover,
+  &:active {
+    background-color: rgba(55, 71, 79, .75);
+  }
+
+  &.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.button--close {
+  padding: 0;
+  background-color: transparent;
+  color: $color-blue;
+
+  &:hover,
+  &:active {
+    background-color: transparent;
+    color: $color-bright;
+  }
+
+  svg {
+    fill: currentColor;
+  }
+}
