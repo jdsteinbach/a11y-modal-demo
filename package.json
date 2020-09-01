@@ -2,7 +2,7 @@
   "name": "a11y-modal-demo",
   "version": "1.0.0",
   "description": "Demo code for “Modal Windows for Everyone” Talk: CascadiaJS 2020",
-  "main": "index.js",
+  "main": ".eleventy.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "eleventy --serve",
