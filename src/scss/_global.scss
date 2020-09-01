@@ -4,13 +4,38 @@ $color-yellow: #FFD007;
 $color-bright: #0033FF;
 $color-gray: #bbb;
 
-* {
+*,
+::before,
+::after {
   box-sizing: border-box;
 }
 
+html {
+  height: 100%;
+}
+
 body {
+  width: 100%;
+  margin: 0;
+  padding: 2rem;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: min(100vw, 40rem);
+  justify-content: center;
+  right: 0;
+  left: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica", "Arial", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 150%;
+
+  &.has-open-modal {
+    position: fixed;
+    top: var(--top, 0);
+  }
+}
+
+h1,
+p {
+  margin: 0 0 2rem;
 }
 
 a {
@@ -54,6 +79,13 @@ input {
     outline: 3px solid $color-green;
     outline-offset: 3px;
   }
+}
+
+footer {
+  margin-top: 4rem;
+  padding: 2rem 0;
+  text-align: center;
+  opacity: .7;
 }
 
 .screen-reader-only {

@@ -5,10 +5,17 @@
     <title>Modal Windows for Everyone</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <button id="button-open" class="button button--open" aria-controls="modal">
+    <header>
+      <h1>Modal Windows for Everyone</h1>
+    </header>
+
+    <main>
+      <p>This demo accompanies my <a href="https://jdsteinbach.com/a11y-modal-slides/">CascadiaJS 2020 Talk: <i>Modal Windows for Everyone</i></a>.</p>
+
+      <button id="button-open" class="button button--open" aria-controls="modal">
   Open Modal
 </button>
 
@@ -42,16 +49,17 @@
       <label for="date">Date of Birth</label>
       <input type="date" id="date" />
 
-      <button class="button" type="submit">Submit</button>
+      <button class="button modal__submit" type="submit">Submit</button>
     </form>
   </div>
 </dialog>
 
+    </main>
 
-    <footer style="padding:2rem;text-align:center;opacity:.7">
+    <footer>
       &copy; 2020 <a href="https://jamessteinbach.com">James Steinbach</a>. All Rights Reserved
     </footer>
 
-    <script src="/scripts.js" async defer></script>
+    <script src="scripts.js" async defer></script>
   </body>
 </html>

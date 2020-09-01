@@ -8,9 +8,17 @@
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    {{ content }}
+    <header>
+      <h1>{{ title }}</h1>
+    </header>
 
-    <footer style="padding:2rem;text-align:center;opacity:.7">
+    <main>
+      <p>This demo accompanies my <a href="https://jdsteinbach.com/a11y-modal-slides/">CascadiaJS 2020 Talk: <i>{{ title }}</i></a>.</p>
+
+      {{ content }}
+    </main>
+
+    <footer>
       &copy; 2020 <a href="https://jamessteinbach.com">James Steinbach</a>. All Rights Reserved
     </footer>
 
